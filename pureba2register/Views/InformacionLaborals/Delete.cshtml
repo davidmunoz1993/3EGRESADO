@@ -1,0 +1,104 @@
+﻿@model pureba2register.Models.InformacionLaboral
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>InformacionLaboral</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.InformacionPersonal.NombresEgresado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InformacionPersonal.NombresEgresado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RangoSalarial.RangoSalarialID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RangoSalarial.RangoSalarialID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trabajaActualmente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trabajaActualmente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombresJefeLaboral)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombresJefeLaboral)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.apellidoJefeLaboral)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.apellidoJefeLaboral)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefonoJefeLaboral)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefonoJefeLaboral)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreEmpresaLaboral)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreEmpresaLaboral)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.direccionEmpresaLaboral)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direccionEmpresaLaboral)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cargoOcupacionLaboral)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cargoOcupacionLaboral)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaIngresoLaboral)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaIngresoLaboral)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

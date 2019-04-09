@@ -1,0 +1,104 @@
+﻿@model pureba2register.Models.ReferenciasPersonales
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>ReferenciasPersonales</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.InformacionPersonal.NombresEgresado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InformacionPersonal.NombresEgresado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Parentesco.TipoParentesco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Parentesco.TipoParentesco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoReferencia.NombreTipoReferencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoReferencia.NombreTipoReferencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombresReferencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombresReferencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.primerApellidoReferencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.primerApellidoReferencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.segundoApellidoReferencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.segundoApellidoReferencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cargoReferencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cargoReferencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefonoFijoReferencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefonoFijoReferencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.extTelefonoReferencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.extTelefonoReferencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefonoMovilReferencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telefonoMovilReferencia)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

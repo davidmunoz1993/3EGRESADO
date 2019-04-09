@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("EGRESOFT", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+
+
+
+
+
+                    <li>
+
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            if (User.IsInRole("Empresa"))
+                            {
+                            <li class="dropdown">
+
+                            <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Agregar Oferta", "Index", "AgregarOfertas")</li>
+                            <li>@Html.ActionLink("Consultar Ofertas", "Index", "ConsultarOfertas")</li>
+                            <li>@Html.ActionLink("Crear Empresa", "Index", "CrearPerfilEmpresas")</li>
+                            <li>@Html.ActionLink("Perfil Empresa", "Index", "PerfilEmpresas")</li>
+
+                            </li>
+                        }
+                    }
+                        </li>
+
+
+                        <li>
+
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                if (User.IsInRole("Admin"))
+                                {
+                                <li class="dropdown">
+
+
+                                <li><a href="#">ROJO</a></li>
+                                <li><a href="#">VERDER</a></li>
+                                <li><a href="#">AMARILLO</a></li>
+
+                                </li>
+                            }
+                        }
+                            </li>
+
+                            <li>
+
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    if (User.IsInRole("Egresado"))
+                                    {
+                                        
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                            Egresados
+                                            <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>@Html.ActionLink("Información personal", "Index", "InformacionPersonals1")</li>
+                                            <li>@Html.ActionLink("Referencias personales", "Index", "ReferenciasPersonales")</li>
+                                            <li>@Html.ActionLink("parentesco", "Index", "Parentescoes")</li>
+                                            <li>@Html.ActionLink("Informacion laboral", "Index", "InformacionLaborals")</li>
+                                            <li>@Html.ActionLink("Carrera profesional", "Index", "CarreraProfesionals")</li>
+                                            <li>@Html.ActionLink("Rango salarial", "Index", "RangoSalarials")</li>
+                                            <li>@Html.ActionLink("Tipo referencia", "Index", "TipoReferencias")</li>
+                                            <li>@Html.ActionLink("Tipo estudio", "Index", "TipoEstudios")</li>
+                                            <li>@Html.ActionLink("País", "Index", "Pais")</li>
+                                            <li>@Html.ActionLink("Departamento", "Index", "Departamentoes")</li>
+                                            <li>@Html.ActionLink("Municipio", "Index", "Municipios")</li>
+
+                                        </ul>
+                                    </li>
+
+                                }
+                            }
+                                </li>
+
+
+
+                            </ul>
+
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        </div>
+    <div>
+        <hr />
+        <footer class="colorfondo">
+            <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

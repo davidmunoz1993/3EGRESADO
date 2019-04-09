@@ -1,0 +1,34 @@
+﻿@model pureba2register.Models.Municipio
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Municipio</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Departamento.NombreDepartamento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Departamento.NombreDepartamento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreMunicipio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreMunicipio)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MunicipioID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

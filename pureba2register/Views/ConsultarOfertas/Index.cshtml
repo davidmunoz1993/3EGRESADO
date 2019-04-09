@@ -1,0 +1,54 @@
+﻿@model IEnumerable<pureba2register.Models.AgregarOferta>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Consultar Oferta</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaInicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaFinal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Asunto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PerfilRequerido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaInicio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaFinal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Asunto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PerfilRequerido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descripcion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.AgregarOfertaID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.AgregarOfertaID })
+        </td>
+    </tr>
+}
+
+</table>

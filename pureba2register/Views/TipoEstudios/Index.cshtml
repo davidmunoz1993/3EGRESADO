@@ -1,0 +1,33 @@
+﻿@model IEnumerable<pureba2register.Models.TipoEstudio>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreTipoEstudio)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreTipoEstudio)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TipoEstudioID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TipoEstudioID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TipoEstudioID })
+        </td>
+    </tr>
+}
+
+</table>

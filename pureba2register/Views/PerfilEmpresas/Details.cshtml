@@ -1,0 +1,58 @@
+﻿@model pureba2register.Models.PerfilEmpresa
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PerfilEmpresa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreEmpresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreEmpresa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DireccionEmpresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DireccionEmpresa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroEgresado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroEgresado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescripccionEmpresa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescripccionEmpresa)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CrearPerfilEmpresaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

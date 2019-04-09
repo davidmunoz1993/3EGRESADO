@@ -1,0 +1,66 @@
+﻿@model pureba2register.Models.InformacionProfesional
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>InformacionProfesional</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CarreraProfesional.NombreCarrera)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CarreraProfesional.NombreCarrera)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.InformacionPersonal.NombresEgresado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.InformacionPersonal.NombresEgresado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoEstudio.NombreTipoEstudio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoEstudio.NombreTipoEstudio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.estudiaActualmente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.estudiaActualmente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaTerminacionProfesional)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaTerminacionProfesional)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.duracionProfesional)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.duracionProfesional)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.InformacionProfesionalID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

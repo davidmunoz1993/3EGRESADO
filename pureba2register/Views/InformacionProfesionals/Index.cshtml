@@ -1,0 +1,63 @@
+﻿@model IEnumerable<pureba2register.Models.InformacionProfesional>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CarreraProfesional.NombreCarrera)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.InformacionPersonal.NombresEgresado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoEstudio.NombreTipoEstudio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estudiaActualmente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaTerminacionProfesional)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.duracionProfesional)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CarreraProfesional.NombreCarrera)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.InformacionPersonal.NombresEgresado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoEstudio.NombreTipoEstudio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estudiaActualmente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaTerminacionProfesional)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.duracionProfesional)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.InformacionProfesionalID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.InformacionProfesionalID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.InformacionProfesionalID })
+        </td>
+    </tr>
+}
+
+</table>

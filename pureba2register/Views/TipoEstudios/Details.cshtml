@@ -1,0 +1,26 @@
+﻿@model pureba2register.Models.TipoEstudio
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TipoEstudio</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreTipoEstudio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreTipoEstudio)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TipoEstudioID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

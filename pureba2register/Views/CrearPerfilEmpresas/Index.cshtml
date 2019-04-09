@@ -1,0 +1,57 @@
+﻿@model IEnumerable<pureba2register.Models.CrearPerfilEmpresa>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreEmpresa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DireccionEmpresa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroEgresado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DescripccionEmpresa)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreEmpresa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DireccionEmpresa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroEgresado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescripccionEmpresa)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CrearPerfilEmpresaID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CrearPerfilEmpresaID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CrearPerfilEmpresaID })
+        </td>
+    </tr>
+}
+
+</table>

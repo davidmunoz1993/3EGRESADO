@@ -1,0 +1,138 @@
+﻿@model pureba2register.Models.InformacionPersonal
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>InformacionPersonal</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombresEgresado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombresEgresado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PrimerApellidoEgresado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PrimerApellidoEgresado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SegundoApellidoEgresado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SegundoApellidoEgresado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaNacimientoEgresado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaNacimientoEgresado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroDocumentoEgresado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroDocumentoEgresado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaExpedicionDocumento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FechaExpedicionDocumento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SexoEgresado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SexoEgresado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.correoEgresado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.correoEgresado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DireccionResidenciaEgresado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DireccionResidenciaEgresado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelefonoMovilEgresado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelefonoMovilEgresado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelefonoFijoEgresado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelefonoFijoEgresado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExtencionTelefonoEgresado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExtencionTelefonoEgresado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroActaGrado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroActaGrado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FotoEgresado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FotoEgresado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstadoEgresado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstadoEgresado)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.InformacionPersonalID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

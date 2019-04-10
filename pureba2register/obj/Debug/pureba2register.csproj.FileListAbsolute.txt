@@ -396,7 +396,6 @@ C:\Users\David\Desktop\Egresado\pureba2register\obj\Debug\pureba2register.csproj
 C:\Users\David\Desktop\Egresado\pureba2register\obj\Debug\pureba2register.csproj.CopyComplete
 C:\Users\David\Desktop\Egresado\pureba2register\obj\Debug\pureba2register.dll
 C:\Users\David\Desktop\Egresado\pureba2register\obj\Debug\pureba2register.pdb
-C:\Users\David\Desktop\Egresado\pureba2register\obj\Debug\pureba2register.csprojAssemblyReference.cache
 C:\Users\David\Desktop\EgresadoNAV\pureba2register\bin\pureba2register.dll.config
 C:\Users\David\Desktop\EgresadoNAV\pureba2register\bin\pureba2register.dll
 C:\Users\David\Desktop\EgresadoNAV\pureba2register\bin\pureba2register.pdb
@@ -929,3 +928,4 @@ C:\Users\David\Desktop\EgresadoNUEVO\pureba2register\obj\Debug\pureba2register.c
 C:\Users\David\Desktop\EgresadoNUEVO\pureba2register\obj\Debug\pureba2register.csproj.CopyComplete
 C:\Users\David\Desktop\EgresadoNUEVO\pureba2register\obj\Debug\pureba2register.dll
 C:\Users\David\Desktop\EgresadoNUEVO\pureba2register\obj\Debug\pureba2register.pdb
+C:\Users\David\Desktop\Egresado\pureba2register\obj\Debug\pureba2register.csprojAssemblyReference.cache

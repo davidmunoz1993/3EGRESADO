@@ -1,0 +1,34 @@
+﻿@model pureba2register.Models.CarreraProfesional
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>CarreraProfesionalEgresado</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreCarrera)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreCarrera)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescripcionCarrera)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescripcionCarrera)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CarreraProfesionalID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

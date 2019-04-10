@@ -52,5 +52,15 @@ namespace pureba2register.Models
         public System.Data.Entity.DbSet<pureba2register.Models.ReferenciasPersonales> ReferenciasPersonales { get; set; }
 
         public System.Data.Entity.DbSet<pureba2register.Models.TipoReferencia> TipoReferencias { get; set; }
+
+        public System.Data.Entity.DbSet<pureba2register.Models.CarreraProfesionalEgresado> CarreraProfesionalEgresadoes { get; set; }
+
+        public System.Data.Entity.DbSet<pureba2register.Models.InfromacionLaboralEgresado> InfromacionLaboralEgresadoes { get; set; }
+
+        public System.Data.Entity.DbSet<pureba2register.Models.InfromacionPersonalEgresado> InfromacionPersonalEgresadoes { get; set; }
+
+        public System.Data.Entity.DbSet<pureba2register.Models.InformacionProfesionalEgresado> InformacionProfesionalEgresadoes { get; set; }
+
+        public System.Data.Entity.DbSet<pureba2register.Models.ReferenciasPersonalesEgresado> ReferenciasPersonalesEgresadoes { get; set; }
     }
 }

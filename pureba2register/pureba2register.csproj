@@ -188,6 +188,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AgregarOfertasController.cs" />
+    <Compile Include="Controllers\CarreraProfesionalEgresadoesController.cs" />
     <Compile Include="Controllers\CarreraProfesionalsController.cs" />
     <Compile Include="Controllers\ConsultarOfertasController.cs" />
     <Compile Include="Controllers\CrearPerfilEmpresasController.cs" />
@@ -196,7 +197,10 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InformacionLaboralsController.cs" />
     <Compile Include="Controllers\InformacionPersonals1Controller.cs" />
+    <Compile Include="Controllers\InformacionProfesionalEgresadoesController.cs" />
     <Compile Include="Controllers\InformacionProfesionalsController.cs" />
+    <Compile Include="Controllers\InfromacionLaboralEgresadoesController.cs" />
+    <Compile Include="Controllers\InfromacionPersonalEgresadoesController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MunicipiosController.cs" />
     <Compile Include="Controllers\PaisController.cs" />
@@ -204,6 +208,7 @@
     <Compile Include="Controllers\PerfilEmpresasController.cs" />
     <Compile Include="Controllers\RangoSalarialsController.cs" />
     <Compile Include="Controllers\ReferenciasPersonalesController.cs" />
+    <Compile Include="Controllers\ReferenciasPersonalesEgresadoesController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\TipoEstudiosController.cs" />
     <Compile Include="Controllers\TipoReferenciasController.cs" />
@@ -223,6 +228,7 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AgregarOferta.cs" />
     <Compile Include="Models\CarreraProfesional.cs" />
+    <Compile Include="Models\CarreraProfesionalEgresado.cs" />
     <Compile Include="Models\ConsultarOferta.cs" />
     <Compile Include="Models\Departamento.cs" />
     <Compile Include="Models\Egresado.cs" />
@@ -230,6 +236,9 @@
     <Compile Include="Models\InformacionLaboral.cs" />
     <Compile Include="Models\InformacionPersonal.cs" />
     <Compile Include="Models\InformacionProfesional.cs" />
+    <Compile Include="Models\InformacionProfesionalEgresado.cs" />
+    <Compile Include="Models\InfromacionLaboralEgresado.cs" />
+    <Compile Include="Models\InfromacionPersonalEgresado.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\CrearPerfilEmpresa.cs" />
     <Compile Include="Models\Municipio.cs" />
@@ -239,6 +248,7 @@
     <Compile Include="Models\pureba2registerContext.cs" />
     <Compile Include="Models\RangoSalarial.cs" />
     <Compile Include="Models\ReferenciasPersonales.cs" />
+    <Compile Include="Models\ReferenciasPersonalesEgresado.cs" />
     <Compile Include="Models\TipoEstudio.cs" />
     <Compile Include="Models\TipoReferencia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -388,6 +398,31 @@
     <Content Include="Views\TipoReferencias\Details.cshtml" />
     <Content Include="Views\TipoReferencias\Edit.cshtml" />
     <Content Include="Views\TipoReferencias\Index.cshtml" />
+    <Content Include="Views\CarreraProfesionalEgresadoes\Create.cshtml" />
+    <Content Include="Views\CarreraProfesionalEgresadoes\Delete.cshtml" />
+    <Content Include="Views\CarreraProfesionalEgresadoes\Details.cshtml" />
+    <Content Include="Views\CarreraProfesionalEgresadoes\Edit.cshtml" />
+    <Content Include="Views\CarreraProfesionalEgresadoes\Index.cshtml" />
+    <Content Include="Views\InfromacionLaboralEgresadoes\Create.cshtml" />
+    <Content Include="Views\InfromacionLaboralEgresadoes\Delete.cshtml" />
+    <Content Include="Views\InfromacionLaboralEgresadoes\Details.cshtml" />
+    <Content Include="Views\InfromacionLaboralEgresadoes\Edit.cshtml" />
+    <Content Include="Views\InfromacionLaboralEgresadoes\Index.cshtml" />
+    <Content Include="Views\InfromacionPersonalEgresadoes\Create.cshtml" />
+    <Content Include="Views\InfromacionPersonalEgresadoes\Delete.cshtml" />
+    <Content Include="Views\InfromacionPersonalEgresadoes\Details.cshtml" />
+    <Content Include="Views\InfromacionPersonalEgresadoes\Edit.cshtml" />
+    <Content Include="Views\InfromacionPersonalEgresadoes\Index.cshtml" />
+    <Content Include="Views\InformacionProfesionalEgresadoes\Create.cshtml" />
+    <Content Include="Views\InformacionProfesionalEgresadoes\Delete.cshtml" />
+    <Content Include="Views\InformacionProfesionalEgresadoes\Details.cshtml" />
+    <Content Include="Views\InformacionProfesionalEgresadoes\Edit.cshtml" />
+    <Content Include="Views\InformacionProfesionalEgresadoes\Index.cshtml" />
+    <Content Include="Views\ReferenciasPersonalesEgresadoes\Create.cshtml" />
+    <Content Include="Views\ReferenciasPersonalesEgresadoes\Delete.cshtml" />
+    <Content Include="Views\ReferenciasPersonalesEgresadoes\Details.cshtml" />
+    <Content Include="Views\ReferenciasPersonalesEgresadoes\Edit.cshtml" />
+    <Content Include="Views\ReferenciasPersonalesEgresadoes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

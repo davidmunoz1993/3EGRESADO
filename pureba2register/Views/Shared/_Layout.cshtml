@@ -71,7 +71,7 @@
                                 {
                                     if (User.IsInRole("Egresado"))
                                     {
-                                        
+
                                     <li class="dropdown">
                                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                             Egresados
@@ -93,6 +93,27 @@
                                         </ul>
                                     </li>
 
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                            Egresados Perfil
+                                            <span class="caret"></span>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li>@Html.ActionLink("Información personal", "Index", "InfromacionPersonalEgresadoes")</li>
+                                            <li>@Html.ActionLink("Referencias personales", "Index", "ReferenciasPersonales")</li>
+                                            <li>@Html.ActionLink("parentesco", "Index", "Parentescoes")</li>
+                                            <li>@Html.ActionLink("Informacion laboral", "Index", "InformacionLaboralEgresadoes")</li>
+                                            <li>@Html.ActionLink("Carrera profesional", "Index", "CarreraProfesionalEgresadoes")</li>
+                                            <li>@Html.ActionLink("Información profesional", "Index", "InformacionProfesionalEgresadoes")</li>
+                                            <li>@Html.ActionLink("Rango salarial", "Index", "RangoSalarials")</li>
+                                            <li>@Html.ActionLink("Tipo referencia", "Index", "TipoReferencias")</li>
+                                            <li>@Html.ActionLink("Tipo estudio", "Index", "TipoEstudios")</li>
+                                            <li>@Html.ActionLink("País", "Index", "Pais")</li>
+                                            <li>@Html.ActionLink("Departamento", "Index", "Departamentoes")</li>
+                                            <li>@Html.ActionLink("Municipio", "Index", "Municipios")</li>
+                                            
+                                        </ul>
+                                    </li>
                                 }
                             }
                                 </li>

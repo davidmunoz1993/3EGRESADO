@@ -928,3 +928,4 @@ C:\Users\David\Desktop\Egresado\pureba2register\obj\Debug\pureba2register.csproj
 C:\Users\David\Desktop\Egresado\pureba2register\obj\Debug\pureba2register.csproj.CopyComplete
 C:\Users\David\Desktop\Egresado\pureba2register\obj\Debug\pureba2register.dll
 C:\Users\David\Desktop\Egresado\pureba2register\obj\Debug\pureba2register.pdb
+C:\Users\David\Desktop\Egresado\pureba2register\obj\Debug\pureba2register.csprojAssemblyReference.cache

@@ -10,7 +10,7 @@ using pureba2register.Models;
 
 namespace pureba2register.Controllers
 {
-    [Authorize(Roles = "Empresa")]
+    [Authorize(Roles = "Empresa,Admin")]
     public class ConsultarOfertasController : Controller
     {
         private pureba2registerContext db = new pureba2registerContext();

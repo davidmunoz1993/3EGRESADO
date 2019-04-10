@@ -17,7 +17,6 @@ namespace pureba2register.Controllers
         // GET: PublicacionesEnEsperas
         public ActionResult Index()
         {
-            
             return View(db.AgregarOfertas.ToList());
         }
 
@@ -28,12 +27,12 @@ namespace pureba2register.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PublicacionesEnEspera publicacionesEnEspera = db.PublicacionesEnEsperas.Find(id);
-            if (publicacionesEnEspera == null)
+            AgregarOferta agregarOferta = db.AgregarOfertas.Find(id);
+            if (agregarOferta == null)
             {
                 return HttpNotFound();
             }
-            return View(publicacionesEnEspera);
+            return View(agregarOferta);
         }
 
         // GET: PublicacionesEnEsperas/Create
@@ -42,23 +41,23 @@ namespace pureba2register.Controllers
             return View();
         }
 
+
         // POST: PublicacionesEnEsperas/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PublicacionEnEspera,FechaInicio,FechaFinalizacion,Asunto,Informacion,EstadoPublicacion")] PublicacionesEnEspera publicacionesEnEspera)
+        public ActionResult Create([Bind(Include = "AgregarOfertaID,FechaInicio,FechaFinal,Asunto,PerfilRequerido,Descripcion")] AgregarOferta agregarOferta)
         {
             if (ModelState.IsValid)
             {
-                db.PublicacionesEnEsperas.Add(publicacionesEnEspera);
+                db.AgregarOfertas.Add(agregarOferta);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(publicacionesEnEspera);
+            return View(agregarOferta);
         }
-
         // GET: PublicacionesEnEsperas/Edit/5
         public ActionResult Edit(int? id)
         {
@@ -66,28 +65,29 @@ namespace pureba2register.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PublicacionesEnEspera publicacionesEnEspera = db.PublicacionesEnEsperas.Find(id);
-            if (publicacionesEnEspera == null)
+            AgregarOferta agregarOferta = db.AgregarOfertas.Find(id);
+            if (agregarOferta == null)
             {
                 return HttpNotFound();
             }
-            return View(publicacionesEnEspera);
+            return View(agregarOferta);
         }
+
 
         // POST: PublicacionesEnEsperas/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "PublicacionEnEspera,FechaInicio,FechaFinalizacion,Asunto,Informacion,EstadoPublicacion")] PublicacionesEnEspera publicacionesEnEspera)
+        public ActionResult Edit([Bind(Include = "AgregarOfertaID,FechaInicio,FechaFinal,Asunto,PerfilRequerido,Descripcion")] AgregarOferta agregarOferta)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(publicacionesEnEspera).State = EntityState.Modified;
+                db.Entry(agregarOferta).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(publicacionesEnEspera);
+            return View(agregarOferta);
         }
 
         // GET: PublicacionesEnEsperas/Delete/5
@@ -97,12 +97,12 @@ namespace pureba2register.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PublicacionesEnEspera publicacionesEnEspera = db.PublicacionesEnEsperas.Find(id);
-            if (publicacionesEnEspera == null)
+            AgregarOferta agregarOferta = db.AgregarOfertas.Find(id);
+            if (agregarOferta == null)
             {
                 return HttpNotFound();
             }
-            return View(publicacionesEnEspera);
+            return View(agregarOferta);
         }
 
         // POST: PublicacionesEnEsperas/Delete/5
@@ -110,8 +110,8 @@ namespace pureba2register.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            PublicacionesEnEspera publicacionesEnEspera = db.PublicacionesEnEsperas.Find(id);
-            db.PublicacionesEnEsperas.Remove(publicacionesEnEspera);
+            AgregarOferta agregarOferta = db.AgregarOfertas.Find(id);
+            db.AgregarOfertas.Remove(agregarOferta);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -126,3 +126,4 @@ namespace pureba2register.Controllers
         }
     }
 }
+

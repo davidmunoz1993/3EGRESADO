@@ -15,12 +15,13 @@ namespace pureba2register.Controllers
         private pureba2registerContext db = new pureba2registerContext();
 
         // GET: InfromacionLaboralEgresadoes
-       
+
         public ActionResult Index()
         {
             var informacionLaborals = db.InformacionLaborals.Include(i => i.InformacionPersonal).Include(i => i.RangoSalarial);
             return View(informacionLaborals.ToList());
         }
+
         // GET: InfromacionLaboralEgresadoes/Details/5
         public ActionResult Details(int? id)
         {
@@ -44,7 +45,6 @@ namespace pureba2register.Controllers
             ViewBag.RangoSalarialID = new SelectList(db.RangoSalarials, "RangoSalarialID", "RangoSalarialID");
             return View();
         }
-
         // POST: InformacionLaborals/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
@@ -80,6 +80,7 @@ namespace pureba2register.Controllers
             ViewBag.RangoSalarialID = new SelectList(db.RangoSalarials, "RangoSalarialID", "RangoSalarialID", informacionLaboral.RangoSalarialID);
             return View(informacionLaboral);
         }
+
         // POST: InfromacionLaboralEgresadoes/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<pureba2register.Models.PublicacionesEnEspera>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaInicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FechaFinalizacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Asunto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Informacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EstadoPublicacion)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaInicio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FechaFinalizacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Asunto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Informacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EstadoPublicacion)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PublicacionEnEspera }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PublicacionEnEspera }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PublicacionEnEspera })
+        </td>
+    </tr>
+}
+
+</table>

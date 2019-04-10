@@ -187,6 +187,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdministradorsController.cs" />
     <Compile Include="Controllers\AgregarOfertasController.cs" />
     <Compile Include="Controllers\CarreraProfesionalEgresadoesController.cs" />
     <Compile Include="Controllers\CarreraProfesionalsController.cs" />
@@ -206,6 +207,8 @@
     <Compile Include="Controllers\PaisController.cs" />
     <Compile Include="Controllers\ParentescoesController.cs" />
     <Compile Include="Controllers\PerfilEmpresasController.cs" />
+    <Compile Include="Controllers\PublicacionAdminsController.cs" />
+    <Compile Include="Controllers\PublicacionesEnEsperasController.cs" />
     <Compile Include="Controllers\RangoSalarialsController.cs" />
     <Compile Include="Controllers\ReferenciasPersonalesController.cs" />
     <Compile Include="Controllers\ReferenciasPersonalesEgresadoesController.cs" />
@@ -226,6 +229,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Administrador.cs" />
     <Compile Include="Models\AgregarOferta.cs" />
     <Compile Include="Models\CarreraProfesional.cs" />
     <Compile Include="Models\CarreraProfesionalEgresado.cs" />
@@ -245,6 +249,8 @@
     <Compile Include="Models\Pais.cs" />
     <Compile Include="Models\Parentesco.cs" />
     <Compile Include="Models\PerfilEmpresa.cs" />
+    <Compile Include="Models\PublicacionAdmin.cs" />
+    <Compile Include="Models\PublicacionesEnEspera.cs" />
     <Compile Include="Models\pureba2registerContext.cs" />
     <Compile Include="Models\RangoSalarial.cs" />
     <Compile Include="Models\ReferenciasPersonales.cs" />
@@ -423,6 +429,21 @@
     <Content Include="Views\ReferenciasPersonalesEgresadoes\Details.cshtml" />
     <Content Include="Views\ReferenciasPersonalesEgresadoes\Edit.cshtml" />
     <Content Include="Views\ReferenciasPersonalesEgresadoes\Index.cshtml" />
+    <Content Include="Views\Administradors\Create.cshtml" />
+    <Content Include="Views\Administradors\Delete.cshtml" />
+    <Content Include="Views\Administradors\Details.cshtml" />
+    <Content Include="Views\Administradors\Edit.cshtml" />
+    <Content Include="Views\Administradors\Index.cshtml" />
+    <Content Include="Views\PublicacionesEnEsperas\Create.cshtml" />
+    <Content Include="Views\PublicacionesEnEsperas\Delete.cshtml" />
+    <Content Include="Views\PublicacionesEnEsperas\Details.cshtml" />
+    <Content Include="Views\PublicacionesEnEsperas\Edit.cshtml" />
+    <Content Include="Views\PublicacionesEnEsperas\Index.cshtml" />
+    <Content Include="Views\PublicacionAdmins\Create.cshtml" />
+    <Content Include="Views\PublicacionAdmins\Delete.cshtml" />
+    <Content Include="Views\PublicacionAdmins\Details.cshtml" />
+    <Content Include="Views\PublicacionAdmins\Edit.cshtml" />
+    <Content Include="Views\PublicacionAdmins\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

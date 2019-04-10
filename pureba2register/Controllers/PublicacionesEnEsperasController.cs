@@ -9,109 +9,109 @@ using System.Web.Mvc;
 using pureba2register.Models;
 
 namespace pureba2register.Controllers
-{   [Authorize(Roles ="Empresa,Admin")]
-    
-    public class AgregarOfertasController : Controller
+{
+    public class PublicacionesEnEsperasController : Controller
     {
         private pureba2registerContext db = new pureba2registerContext();
 
-        // GET: AgregarOfertas
+        // GET: PublicacionesEnEsperas
         public ActionResult Index()
         {
+            
             return View(db.AgregarOfertas.ToList());
         }
 
-        // GET: AgregarOfertas/Details/5
+        // GET: PublicacionesEnEsperas/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            AgregarOferta agregarOferta = db.AgregarOfertas.Find(id);
-            if (agregarOferta == null)
+            PublicacionesEnEspera publicacionesEnEspera = db.PublicacionesEnEsperas.Find(id);
+            if (publicacionesEnEspera == null)
             {
                 return HttpNotFound();
             }
-            return View(agregarOferta);
+            return View(publicacionesEnEspera);
         }
 
-        // GET: AgregarOfertas/Create
+        // GET: PublicacionesEnEsperas/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: AgregarOfertas/Create
+        // POST: PublicacionesEnEsperas/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "AgregarOfertaID,FechaInicio,FechaFinal,Asunto,PerfilRequerido,Descripcion")] AgregarOferta agregarOferta)
+        public ActionResult Create([Bind(Include = "PublicacionEnEspera,FechaInicio,FechaFinalizacion,Asunto,Informacion,EstadoPublicacion")] PublicacionesEnEspera publicacionesEnEspera)
         {
             if (ModelState.IsValid)
             {
-                db.AgregarOfertas.Add(agregarOferta);
+                db.PublicacionesEnEsperas.Add(publicacionesEnEspera);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(agregarOferta);
+            return View(publicacionesEnEspera);
         }
 
-        // GET: AgregarOfertas/Edit/5
+        // GET: PublicacionesEnEsperas/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            AgregarOferta agregarOferta = db.AgregarOfertas.Find(id);
-            if (agregarOferta == null)
+            PublicacionesEnEspera publicacionesEnEspera = db.PublicacionesEnEsperas.Find(id);
+            if (publicacionesEnEspera == null)
             {
                 return HttpNotFound();
             }
-            return View(agregarOferta);
+            return View(publicacionesEnEspera);
         }
 
-        // POST: AgregarOfertas/Edit/5
+        // POST: PublicacionesEnEsperas/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "AgregarOfertaID,FechaInicio,FechaFinal,Asunto,PerfilRequerido,Descripcion")] AgregarOferta agregarOferta)
+        public ActionResult Edit([Bind(Include = "PublicacionEnEspera,FechaInicio,FechaFinalizacion,Asunto,Informacion,EstadoPublicacion")] PublicacionesEnEspera publicacionesEnEspera)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(agregarOferta).State = EntityState.Modified;
+                db.Entry(publicacionesEnEspera).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(agregarOferta);
+            return View(publicacionesEnEspera);
         }
 
-        // GET: AgregarOfertas/Delete/5
+        // GET: PublicacionesEnEsperas/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            AgregarOferta agregarOferta = db.AgregarOfertas.Find(id);
-            if (agregarOferta == null)
+            PublicacionesEnEspera publicacionesEnEspera = db.PublicacionesEnEsperas.Find(id);
+            if (publicacionesEnEspera == null)
             {
                 return HttpNotFound();
             }
-            return View(agregarOferta);
+            return View(publicacionesEnEspera);
         }
 
-        // POST: AgregarOfertas/Delete/5
+        // POST: PublicacionesEnEsperas/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            AgregarOferta agregarOferta = db.AgregarOfertas.Find(id);
-            db.AgregarOfertas.Remove(agregarOferta);
+            PublicacionesEnEspera publicacionesEnEspera = db.PublicacionesEnEsperas.Find(id);
+            db.PublicacionesEnEsperas.Remove(publicacionesEnEspera);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

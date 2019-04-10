@@ -1,117 +1,112 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
+﻿using pureba2register.Models;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
-using System.Web;
 using System.Web.Mvc;
-using pureba2register.Models;
 
 namespace pureba2register.Controllers
-{   [Authorize(Roles ="Empresa,Admin")]
-    
-    public class AgregarOfertasController : Controller
+{
+    public class AdministradorsController : Controller
     {
         private pureba2registerContext db = new pureba2registerContext();
 
-        // GET: AgregarOfertas
+        // GET: Administradors
         public ActionResult Index()
         {
-            return View(db.AgregarOfertas.ToList());
+            return View(db.Administradors.ToList());
         }
 
-        // GET: AgregarOfertas/Details/5
+        // GET: Administradors/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            AgregarOferta agregarOferta = db.AgregarOfertas.Find(id);
-            if (agregarOferta == null)
+            Administrador administrador = db.Administradors.Find(id);
+            if (administrador == null)
             {
                 return HttpNotFound();
             }
-            return View(agregarOferta);
+            return View(administrador);
         }
 
-        // GET: AgregarOfertas/Create
+        // GET: Administradors/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: AgregarOfertas/Create
+        // POST: Administradors/Create
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "AgregarOfertaID,FechaInicio,FechaFinal,Asunto,PerfilRequerido,Descripcion")] AgregarOferta agregarOferta)
+        public ActionResult Create([Bind(Include = "AdministradorID,Nombre,PrimerApellido,SegundoApellido,Direccion,TelefonoFijo,TelefonoMovil,NumeroDocumento,Contraseña")] Administrador administrador)
         {
             if (ModelState.IsValid)
             {
-                db.AgregarOfertas.Add(agregarOferta);
+                db.Administradors.Add(administrador);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(agregarOferta);
+            return View(administrador);
         }
 
-        // GET: AgregarOfertas/Edit/5
+        // GET: Administradors/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            AgregarOferta agregarOferta = db.AgregarOfertas.Find(id);
-            if (agregarOferta == null)
+            Administrador administrador = db.Administradors.Find(id);
+            if (administrador == null)
             {
                 return HttpNotFound();
             }
-            return View(agregarOferta);
+            return View(administrador);
         }
 
-        // POST: AgregarOfertas/Edit/5
+        // POST: Administradors/Edit/5
         // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "AgregarOfertaID,FechaInicio,FechaFinal,Asunto,PerfilRequerido,Descripcion")] AgregarOferta agregarOferta)
+        public ActionResult Edit([Bind(Include = "AdministradorID,Nombre,PrimerApellido,SegundoApellido,Direccion,TelefonoFijo,TelefonoMovil,NumeroDocumento,Contraseña")] Administrador administrador)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(agregarOferta).State = EntityState.Modified;
+                db.Entry(administrador).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(agregarOferta);
+            return View(administrador);
         }
 
-        // GET: AgregarOfertas/Delete/5
+        // GET: Administradors/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            AgregarOferta agregarOferta = db.AgregarOfertas.Find(id);
-            if (agregarOferta == null)
+            Administrador administrador = db.Administradors.Find(id);
+            if (administrador == null)
             {
                 return HttpNotFound();
             }
-            return View(agregarOferta);
+            return View(administrador);
         }
 
-        // POST: AgregarOfertas/Delete/5
+        // POST: Administradors/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            AgregarOferta agregarOferta = db.AgregarOfertas.Find(id);
-            db.AgregarOfertas.Remove(agregarOferta);
+            Administrador administrador = db.Administradors.Find(id);
+            db.Administradors.Remove(administrador);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

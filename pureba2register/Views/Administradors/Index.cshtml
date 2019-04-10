@@ -1,0 +1,81 @@
+﻿@model IEnumerable<pureba2register.Models.Administrador>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Administrador</h2>
+
+<p>
+    @Html.ActionLink("Crear nuevo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PrimerApellido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SegundoApellido)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TelefonoFijo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TelefonoMovil)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NumeroDocumento)
+        </th>
+      
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nombre)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PrimerApellido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SegundoApellido)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelefonoFijo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelefonoMovil)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumeroDocumento)
+        </td>
+
+        <td>
+
+            <a class="colorBoton" href="/Administradors/Edit/@item.AdministradorID">Editar<samp class="glyphicon glyphicon-edit"> </samp></a>
+
+
+
+        <td> <a class="colorBoton" href="/Administradors/Details/@item.AdministradorID">Detalles<samp class="glyphicon glyphicon-exclamation-sign"> </samp></a></td>
+
+
+
+        <td> <a class="colorBoton" href="/Administradors/Delete/@item.AdministradorID">Eliminar<samp class="glyphicon glyphicon-trash"> </samp></a></td>
+
+
+
+        </td>
+    </tr>
+}
+
+</table>

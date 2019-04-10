@@ -62,5 +62,11 @@ namespace pureba2register.Models
         public System.Data.Entity.DbSet<pureba2register.Models.InformacionProfesionalEgresado> InformacionProfesionalEgresadoes { get; set; }
 
         public System.Data.Entity.DbSet<pureba2register.Models.ReferenciasPersonalesEgresado> ReferenciasPersonalesEgresadoes { get; set; }
+
+        public System.Data.Entity.DbSet<pureba2register.Models.Administrador> Administradors { get; set; }
+
+        public System.Data.Entity.DbSet<pureba2register.Models.PublicacionesEnEspera> PublicacionesEnEsperas { get; set; }
+
+        public System.Data.Entity.DbSet<pureba2register.Models.PublicacionAdmin> PublicacionAdmins { get; set; }
     }
 }

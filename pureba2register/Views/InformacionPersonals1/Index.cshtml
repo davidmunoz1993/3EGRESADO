@@ -4,13 +4,16 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Informacion personal</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    <a class="btn btn-info" @Html.ActionLink("Registrar nuevo", "Create")></a>
 </p>
 <table class="table">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoDocumento.NombreTipoDocumento)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.NombresEgresado)
         </th>
@@ -62,6 +65,9 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.TipoDocumento.NombreTipoDocumento)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.NombresEgresado)
         </td>
         <td>
@@ -107,9 +113,11 @@
             @Html.DisplayFor(modelItem => item.EstadoEgresado)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.InformacionPersonalID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.InformacionPersonalID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.InformacionPersonalID })
+            <a class="btn btn-warning" href="/InformacionPersonals1/Edit/@item.InformacionPersonalID">Editar<samp class="glyphicon glyphicon-edit"> </samp></a>
+            <a class="btn btn-info" href="/InformacionPersonals1/Details/@item.InformacionPersonalID">Detalles<samp class="glyphicon glyphicon-exclamation-sign"> </samp></a>
+
+            
+           
         </td>
     </tr>
 }

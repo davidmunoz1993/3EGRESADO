@@ -190,7 +190,7 @@
     <Compile Include="Controllers\AdministradorsController.cs" />
     <Compile Include="Controllers\AgregarOfertasController.cs" />
     <Compile Include="Controllers\CarreraProfesionalEgresadoesController.cs" />
-    <Compile Include="Controllers\CarreraProfesionalsController.cs" />
+    <Compile Include="Controllers\CarreraProfesionals1Controller.cs" />
     <Compile Include="Controllers\ConsultarOfertasController.cs" />
     <Compile Include="Controllers\CrearPerfilEmpresasController.cs" />
     <Compile Include="Controllers\DepartamentoesController.cs" />
@@ -213,6 +213,7 @@
     <Compile Include="Controllers\ReferenciasPersonalesController.cs" />
     <Compile Include="Controllers\ReferenciasPersonalesEgresadoesController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
+    <Compile Include="Controllers\TipoDocumentoesController.cs" />
     <Compile Include="Controllers\TipoEstudiosController.cs" />
     <Compile Include="Controllers\TipoReferenciasController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
@@ -255,6 +256,7 @@
     <Compile Include="Models\RangoSalarial.cs" />
     <Compile Include="Models\ReferenciasPersonales.cs" />
     <Compile Include="Models\ReferenciasPersonalesEgresado.cs" />
+    <Compile Include="Models\TipoDocumento.cs" />
     <Compile Include="Models\TipoEstudio.cs" />
     <Compile Include="Models\TipoReferencia.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -345,21 +347,24 @@
     <Content Include="Views\PerfilEmpresas\Details.cshtml" />
     <Content Include="Views\PerfilEmpresas\Edit.cshtml" />
     <Content Include="Views\PerfilEmpresas\Index.cshtml" />
-    <Content Include="Views\CarreraProfesionals\Create.cshtml" />
-    <Content Include="Views\CarreraProfesionals\Delete.cshtml" />
-    <Content Include="Views\CarreraProfesionals\Details.cshtml" />
-    <Content Include="Views\CarreraProfesionals\Edit.cshtml" />
-    <Content Include="Views\CarreraProfesionals\Index.cshtml" />
     <Content Include="Views\Departamentoes\Create.cshtml" />
     <Content Include="Views\Departamentoes\Delete.cshtml" />
     <Content Include="Views\Departamentoes\Details.cshtml" />
     <Content Include="Views\Departamentoes\Edit.cshtml" />
     <Content Include="Views\Departamentoes\Index.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\InformacionPersonals1\Create.cshtml" />
     <Content Include="Views\InformacionPersonals1\Delete.cshtml" />
     <Content Include="Views\InformacionPersonals1\Details.cshtml" />
     <Content Include="Views\InformacionPersonals1\Edit.cshtml" />
     <Content Include="Views\InformacionPersonals1\Index.cshtml" />
+=======
+    <Content Include="Views\InformacionLaborals\Create.cshtml" />
+    <Content Include="Views\InformacionLaborals\Delete.cshtml" />
+    <Content Include="Views\InformacionLaborals\Details.cshtml" />
+    <Content Include="Views\InformacionLaborals\Edit.cshtml" />
+    <Content Include="Views\InformacionLaborals\Index.cshtml" />
+>>>>>>> 04e35373fbc92edf6b3deb547e0b9781512f2670
     <Content Include="Views\InformacionProfesionals\Create.cshtml" />
     <Content Include="Views\InformacionProfesionals\Delete.cshtml" />
     <Content Include="Views\InformacionProfesionals\Details.cshtml" />
@@ -440,11 +445,29 @@
     <Content Include="Views\PublicacionAdmins\Details.cshtml" />
     <Content Include="Views\PublicacionAdmins\Edit.cshtml" />
     <Content Include="Views\PublicacionAdmins\Index.cshtml" />
+<<<<<<< HEAD
     <Content Include="Views\InformacionLaboralEgresadoes\Create.cshtml" />
     <Content Include="Views\InformacionLaboralEgresadoes\Delete.cshtml" />
     <Content Include="Views\InformacionLaboralEgresadoes\Details.cshtml" />
     <Content Include="Views\InformacionLaboralEgresadoes\Edit.cshtml" />
     <Content Include="Views\InformacionLaboralEgresadoes\Index.cshtml" />
+=======
+    <Content Include="Views\TipoDocumentoes\Create.cshtml" />
+    <Content Include="Views\TipoDocumentoes\Delete.cshtml" />
+    <Content Include="Views\TipoDocumentoes\Details.cshtml" />
+    <Content Include="Views\TipoDocumentoes\Edit.cshtml" />
+    <Content Include="Views\TipoDocumentoes\Index.cshtml" />
+    <Content Include="Views\InformacionPersonals1\Create.cshtml" />
+    <Content Include="Views\InformacionPersonals1\Delete.cshtml" />
+    <Content Include="Views\InformacionPersonals1\Details.cshtml" />
+    <Content Include="Views\InformacionPersonals1\Edit.cshtml" />
+    <Content Include="Views\InformacionPersonals1\Index.cshtml" />
+    <Content Include="Views\CarreraProfesionals1\Create.cshtml" />
+    <Content Include="Views\CarreraProfesionals1\Delete.cshtml" />
+    <Content Include="Views\CarreraProfesionals1\Details.cshtml" />
+    <Content Include="Views\CarreraProfesionals1\Edit.cshtml" />
+    <Content Include="Views\CarreraProfesionals1\Index.cshtml" />
+>>>>>>> 04e35373fbc92edf6b3deb547e0b9781512f2670
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

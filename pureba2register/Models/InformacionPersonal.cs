@@ -77,6 +77,9 @@ namespace pureba2register.Models
         [Required(ErrorMessage = " Este campo no puede ir vacío")]
         public int EstadoEgresado { get; set; }
 
+        public int TipoDocumentoID { get; set; }
+        public virtual TipoDocumento TipoDocumento { get; set; }
+
         public virtual ICollection<ReferenciasPersonales> ReferenciasPersonales { get; set; }
         public virtual ICollection<InformacionLaboral> InformacionLaborals { get; set; }
         public virtual ICollection<InformacionProfesional> InformacionProfesionals { get; set; }

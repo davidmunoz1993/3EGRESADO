@@ -1,0 +1,87 @@
+﻿@model IEnumerable<pureba2register.Models.InformacionLaboral>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Información laboral</h2>
+
+<p>
+  <a class="btn btn-info" @Html.ActionLink("Registrar nuevo", "Create")></a>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.InformacionPersonal.NombresEgresado)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RangoSalarial.RangoSalarialID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trabajaActualmente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nombresJefeLaboral)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.apellidoJefeLaboral)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.telefonoJefeLaboral)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nombreEmpresaLaboral)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.direccionEmpresaLaboral)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cargoOcupacionLaboral)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaIngresoLaboral)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.InformacionPersonal.NombresEgresado)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RangoSalarial.RangoSalarialID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.trabajaActualmente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombresJefeLaboral)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.apellidoJefeLaboral)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.telefonoJefeLaboral)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombreEmpresaLaboral)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.direccionEmpresaLaboral)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cargoOcupacionLaboral)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaIngresoLaboral)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.InformacionLaboralID }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.InformacionLaboralID }) 
+          
+        </td>
+    </tr>
+}
+
+</table>

@@ -17,7 +17,8 @@ namespace pureba2register.Controllers
         // GET: InformacionPersonals1
         public ActionResult Index()
         {
-            return View(db.InformacionPersonals.ToList());
+            var informacionPersonals = db.InformacionPersonals.Include(i => i.TipoDocumento);
+            return View(informacionPersonals.ToList());
         }
 
         // GET: InformacionPersonals1/Details/5
@@ -38,6 +39,7 @@ namespace pureba2register.Controllers
         // GET: InformacionPersonals1/Create
         public ActionResult Create()
         {
+            ViewBag.TipoDocumentoID = new SelectList(db.TipoDocumentoes, "TipoDocumentoID", "NombreTipoDocumento");
             return View();
         }
 
@@ -46,7 +48,7 @@ namespace pureba2register.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "InformacionPersonalID,NombresEgresado,PrimerApellidoEgresado,SegundoApellidoEgresado,FechaNacimientoEgresado,NumeroDocumentoEgresado,FechaExpedicionDocumento,SexoEgresado,correoEgresado,DireccionResidenciaEgresado,TelefonoMovilEgresado,TelefonoFijoEgresado,ExtencionTelefonoEgresado,NumeroActaGrado,FotoEgresado,EstadoEgresado")] InformacionPersonal informacionPersonal)
+        public ActionResult Create([Bind(Include = "InformacionPersonalID,NombresEgresado,PrimerApellidoEgresado,SegundoApellidoEgresado,FechaNacimientoEgresado,NumeroDocumentoEgresado,FechaExpedicionDocumento,SexoEgresado,correoEgresado,DireccionResidenciaEgresado,TelefonoMovilEgresado,TelefonoFijoEgresado,ExtencionTelefonoEgresado,NumeroActaGrado,FotoEgresado,EstadoEgresado,TipoDocumentoID")] InformacionPersonal informacionPersonal)
         {
             if (ModelState.IsValid)
             {
@@ -55,6 +57,7 @@ namespace pureba2register.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.TipoDocumentoID = new SelectList(db.TipoDocumentoes, "TipoDocumentoID", "NombreTipoDocumento", informacionPersonal.TipoDocumentoID);
             return View(informacionPersonal);
         }
 
@@ -70,6 +73,7 @@ namespace pureba2register.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.TipoDocumentoID = new SelectList(db.TipoDocumentoes, "TipoDocumentoID", "NombreTipoDocumento", informacionPersonal.TipoDocumentoID);
             return View(informacionPersonal);
         }
 
@@ -78,7 +82,7 @@ namespace pureba2register.Controllers
         // más información vea https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "InformacionPersonalID,NombresEgresado,PrimerApellidoEgresado,SegundoApellidoEgresado,FechaNacimientoEgresado,NumeroDocumentoEgresado,FechaExpedicionDocumento,SexoEgresado,correoEgresado,DireccionResidenciaEgresado,TelefonoMovilEgresado,TelefonoFijoEgresado,ExtencionTelefonoEgresado,NumeroActaGrado,FotoEgresado,EstadoEgresado")] InformacionPersonal informacionPersonal)
+        public ActionResult Edit([Bind(Include = "InformacionPersonalID,NombresEgresado,PrimerApellidoEgresado,SegundoApellidoEgresado,FechaNacimientoEgresado,NumeroDocumentoEgresado,FechaExpedicionDocumento,SexoEgresado,correoEgresado,DireccionResidenciaEgresado,TelefonoMovilEgresado,TelefonoFijoEgresado,ExtencionTelefonoEgresado,NumeroActaGrado,FotoEgresado,EstadoEgresado,TipoDocumentoID")] InformacionPersonal informacionPersonal)
         {
             if (ModelState.IsValid)
             {
@@ -86,6 +90,7 @@ namespace pureba2register.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.TipoDocumentoID = new SelectList(db.TipoDocumentoes, "TipoDocumentoID", "NombreTipoDocumento", informacionPersonal.TipoDocumentoID);
             return View(informacionPersonal);
         }
 

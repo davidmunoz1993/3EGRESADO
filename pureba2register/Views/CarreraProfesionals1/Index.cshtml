@@ -1,0 +1,50 @@
+﻿@model IEnumerable<pureba2register.Models.CarreraProfesional>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Carrera profesional </h2>
+
+<p>
+
+    <a class="btn btn-info" @Html.ActionLink("Registrar nuevo", "Create")> </a>
+</p>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NombreCarrera)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DescripcionCarrera)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreCarrera)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescripcionCarrera)
+        </td>
+        @*<td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.CarreraProfesionalID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.CarreraProfesionalID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.CarreraProfesionalID })
+        </td>*@
+        <td>
+
+            <a class="btn btn-warning" href="/CarreraProfesionals1/Edit/@item.CarreraProfesionalID">Editar<samp class="glyphicon glyphicon-edit"> </samp></a> 
+
+         <a class="btn btn-info" href="/CarreraProfesionals1/Details/@item.CarreraProfesionalID">Detalles<samp class="glyphicon glyphicon-exclamation-sign"> </samp></a> 
+
+         <a class="btn btn-danger" href="/CarreraProfesionals1/Details/@item.CarreraProfesionalID">Eliminar<samp class="glyphicon glyphicon-trash"> </samp></a>
+            </td>
+    </tr>
+}
+
+</table>

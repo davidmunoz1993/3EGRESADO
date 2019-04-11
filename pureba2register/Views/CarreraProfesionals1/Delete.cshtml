@@ -1,0 +1,40 @@
+﻿@model pureba2register.Models.CarreraProfesional
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Deseas eliminar esto?</h3>
+<div>
+    <h4>Carrera profesional</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreCarrera)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreCarrera)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescripcionCarrera)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescripcionCarrera)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

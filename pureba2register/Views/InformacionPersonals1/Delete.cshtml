@@ -4,13 +4,21 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<h2>Eliminar</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>¿Deseas eliminar esto?</h3>
 <div>
-    <h4>InformacionPersonal</h4>
+    <h4>Informacion personal</h4>
     <hr />
     <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoDocumento.NombreTipoDocumento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoDocumento.NombreTipoDocumento)
+        </dd>
+
         <dt>
             @Html.DisplayNameFor(model => model.NombresEgresado)
         </dt>
@@ -137,8 +145,8 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            <input type="submit" value=" Eliminar" class="btn btn-info" /> |
+           <a class="btn btn-info" @Html.ActionLink("Atrás", "Index")></a>
         </div>
     }
 </div>

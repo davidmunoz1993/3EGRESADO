@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    <title>@ViewBag.Title Egresados</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
@@ -55,13 +55,26 @@
                                 if (User.IsInRole("Admin"))
                                 {
                                 <li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        Egresados ADMIN
+                                        <span class="caret"></span>
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        
+                                        <li>@Html.ActionLink("parentesco", "Index", "Parentescoes")</li>
+                                        <li>@Html.ActionLink("Carrera profesional", "Index", "CarreraProfesionals1")</li>
+                                        <li>@Html.ActionLink("Rango salarial", "Index", "RangoSalarials")</li>
+                                        <li>@Html.ActionLink("Tipo referencia", "Index", "TipoReferencias")</li>
+                                        <li>@Html.ActionLink("Tipo estudio", "Index", "TipoEstudios")</li>
+                                        <li>@Html.ActionLink("Tipo de documento", "Index", "TipoDocumentoes")</li>
+                                        <li>@Html.ActionLink("País", "Index", "Pais")</li>
+                                        <li>@Html.ActionLink("Departamento", "Index", "Departamentoes")</li>
+                                        <li>@Html.ActionLink("Municipio", "Index", "Municipios")</li>
 
 
-                                
-                                <li>@Html.ActionLink("Administrador", "Index", "Administradors")</li>
-                                <li>@Html.ActionLink("Publicaciones en espera", "Index", "ConsultarOfertas")</li>
-                                <li>@Html.ActionLink("Publicación", "Index", "PublicacionAdmins")</li>
+                                    </ul>
                                 </li>
+
                             }
                         }
                             </li>
@@ -81,15 +94,10 @@
                                         <ul class="dropdown-menu">
                                             <li>@Html.ActionLink("Información personal", "Index", "InformacionPersonals1")</li>
                                             <li>@Html.ActionLink("Referencias personales", "Index", "ReferenciasPersonales")</li>
-                                            <li>@Html.ActionLink("parentesco", "Index", "Parentescoes")</li>
+                                            
                                             <li>@Html.ActionLink("Informacion laboral", "Index", "InformacionLaborals")</li>
-                                            <li>@Html.ActionLink("Carrera profesional", "Index", "CarreraProfesionals")</li>
-                                            <li>@Html.ActionLink("Rango salarial", "Index", "RangoSalarials")</li>
-                                            <li>@Html.ActionLink("Tipo referencia", "Index", "TipoReferencias")</li>
-                                            <li>@Html.ActionLink("Tipo estudio", "Index", "TipoEstudios")</li>
-                                            <li>@Html.ActionLink("País", "Index", "Pais")</li>
-                                            <li>@Html.ActionLink("Departamento", "Index", "Departamentoes")</li>
-                                            <li>@Html.ActionLink("Municipio", "Index", "Municipios")</li>
+                                            <li>@Html.ActionLink("Información profesional", "Index", "InformacionProfesionals")</li>
+                                            
 
                                         </ul>
                                     </li>
@@ -100,15 +108,15 @@
                                             <span class="caret"></span>
                                         </a>
                                         <ul class="dropdown-menu">
-                                          
+
                                             <li>@Html.ActionLink("Información personal", "Index", "InfromacionPersonalEgresadoes")</li>
-                                            
+
                                             <li>@Html.ActionLink("Referencias personales", "Index", "ReferenciasPersonales")</li>
-                                           
+
                                             <li>@Html.ActionLink("Informacion laboral", "Index", "InfromacionLaboralEgresadoes")</li>
-                                      
+
                                             <li>@Html.ActionLink("Información profesional", "Index", "InformacionProfesionalEgresadoes")</li>
-                                            
+
 
                                         </ul>
                                     </li>

@@ -68,5 +68,7 @@ namespace pureba2register.Models
         public System.Data.Entity.DbSet<pureba2register.Models.PublicacionesEnEspera> PublicacionesEnEsperas { get; set; }
 
         public System.Data.Entity.DbSet<pureba2register.Models.PublicacionAdmin> PublicacionAdmins { get; set; }
+
+        public System.Data.Entity.DbSet<pureba2register.Models.TipoDocumento> TipoDocumentoes { get; set; }
     }
 }

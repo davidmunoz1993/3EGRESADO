@@ -4,84 +4,79 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Referencias Personales</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.InformacionPersonal.NombresEgresado)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Parentesco.TipoParentesco)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TipoReferencia.NombreTipoReferencia)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.nombresReferencia)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.primerApellidoReferencia)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.segundoApellidoReferencia)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.cargoReferencia)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.telefonoFijoReferencia)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.extTelefonoReferencia)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.telefonoMovilReferencia)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.InformacionPersonal.NombresEgresado)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Parentesco.TipoParentesco)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TipoReferencia.NombreTipoReferencia)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.nombresReferencia)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.primerApellidoReferencia)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.segundoApellidoReferencia)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.cargoReferencia)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.telefonoFijoReferencia)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.extTelefonoReferencia)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.telefonoMovilReferencia)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.referenciasPersonalesID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.referenciasPersonalesID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.referenciasPersonalesID })
-        </td>
-    </tr>
+@foreach (var item in Model)
+{
+    <div class="formu">
+        <div class="form-group row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Nombre/s*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.InformacionPersonal.NombresEgresado)
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label">Tipo De Parentesco*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.Parentesco.TipoParentesco)
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label">Nombre/s*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.TipoReferencia.NombreTipoReferencia)
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label">Primer Apellido*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.primerApellidoReferencia)
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label">Segundo Apellido*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.segundoApellidoReferencia)
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="subject">Cargo Que Ocupa*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.cargoReferencia)
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="subject">Telefono*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.telefonoFijoReferencia)
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="subject">Telefono Movil*</label>
+                        <br>
+                        @Html.DisplayFor(modelItem => item.telefonoMovilReferencia)
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form-group">
+                        <label for="subject">Ext*</label>
+                        <br>
+                        @Html.DisplayFor(modelItem => item.extTelefonoReferencia)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @Html.ActionLink("Edit", "Edit", new { id = item.referenciasPersonalesID })
 }
-
-</table>

@@ -9,109 +9,124 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.NombresEgresado)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.PrimerApellidoEgresado)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SegundoApellidoEgresado)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FechaNacimientoEgresado)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NumeroDocumentoEgresado)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FechaExpedicionDocumento)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.SexoEgresado)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.correoEgresado)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.DireccionResidenciaEgresado)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TelefonoMovilEgresado)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.TelefonoFijoEgresado)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ExtencionTelefonoEgresado)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NumeroActaGrado)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FotoEgresado)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.EstadoEgresado)
-        </th>
-        <th></th>
-    </tr>
+@foreach (var item in Model)
+{
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.NombresEgresado)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PrimerApellidoEgresado)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SegundoApellidoEgresado)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FechaNacimientoEgresado)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NumeroDocumentoEgresado)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FechaExpedicionDocumento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.SexoEgresado)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.correoEgresado)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DireccionResidenciaEgresado)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TelefonoMovilEgresado)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TelefonoFijoEgresado)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ExtencionTelefonoEgresado)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NumeroActaGrado)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FotoEgresado)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.EstadoEgresado)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.InformacionPersonalID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.InformacionPersonalID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.InformacionPersonalID })
-        </td>
-    </tr>
+    <Div class="formu">
+        <Div class="form-group row">
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label">Nombre/s*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.NombresEgresado)
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label class="control-label">Primer apellido*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.PrimerApellidoEgresado)
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label class="control-label">Segundo apellido*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.SegundoApellidoEgresado)
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="subject"> Fecha De Nacimiento*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.FechaNacimientoEgresado)
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label class="control-label">Número de documento*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.NumeroDocumentoEgresado)
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label class="control-label">Fecha De Expedición Del Documento*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.FechaExpedicionDocumento)
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label">Sexo*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.SexoEgresado)
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label class="control-label">Correo Electronico*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.correoEgresado)
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label class="control-label">Direccion De Reciddencia*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.DireccionResidenciaEgresado)
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label">Telefono Movil*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.TelefonoMovilEgresado)
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label class="control-label">Telefono Fijo*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.TelefonoFijoEgresado)
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label class="control-label">Ext Del Telefono*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.ExtencionTelefonoEgresado)
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label">Numero De Acta De Grado*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.NumeroActaGrado)
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label class="control-label">Foto*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.FotoEgresado)
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="form-group">
+                    <label class="control-label">Estado Del Egresado*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.EstadoEgresado)
+                </div>
+            </div>
+        </Div>
+    </Div>
+
+    
+
+    @Html.ActionLink("Edit", "Edit", new { id = item.InformacionPersonalID })
+
 }
-
-</table>

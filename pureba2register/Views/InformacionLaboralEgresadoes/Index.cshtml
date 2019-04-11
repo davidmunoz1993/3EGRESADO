@@ -1,0 +1,91 @@
+﻿@model IEnumerable<pureba2register.Models.InformacionLaboral>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Informacion Laboral</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@foreach (var item in Model)
+{
+    <div class="formu">
+        <div class="form-group row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Nombre/s*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.InformacionPersonal.NombresEgresado)
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label">Rango salarial ID*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.RangoSalarial.RangoSalarialID)
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label">Trabaja Actualmente*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.trabajaActualmente)
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label"> Jefe Inmediato - Nombre/s*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.nombresJefeLaboral)
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="control-label"> Jefe Inmediato - Apellidos*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.apellidoJefeLaboral)
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="subject"> Jefe Inmediato - Telefono*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.telefonoJefeLaboral)
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="subject">Nombre De La Empresa*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.nombreEmpresaLaboral)
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="subject">Direccion De La Empresa*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.direccionEmpresaLaboral)
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="subject">Cargo Ocupacional*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.cargoOcupacionLaboral)
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="subject">Fecha De Ingreso*</label>
+                    <br>
+                    @Html.DisplayFor(modelItem => item.fechaIngresoLaboral)
+                </div>
+            </div>
+        </div>
+    </div>
+    @Html.ActionLink("Edit", "Edit", new { id = item.InformacionLaboralID })
+
+}
